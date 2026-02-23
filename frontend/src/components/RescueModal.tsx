@@ -67,17 +67,22 @@ export default function RescueModal({
             <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
 
             {/* Modal */}
-            <div className="relative bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl border border-slate-700/50 shadow-2xl w-full max-w-md overflow-hidden">
+            <div className="relative bg-gradient-to-br from-[#120428] to-[#0e0520] rounded-3xl border border-white/[0.06] shadow-2xl w-full max-w-md overflow-hidden">
                 {/* Danger gradient top */}
-                <div className="h-1.5 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500" />
+                <div className="h-1 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500" />
 
                 {/* Header */}
                 <div className="px-6 pt-5 pb-3 flex items-center justify-between">
-                    <div>
-                        <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                            🚨 Position Rescue
-                        </h2>
-                        <p className="text-sm text-slate-400 mt-1">Protect your position from liquidation</p>
+                    <div className="flex items-center gap-3">
+                        <div className="w-9 h-9 rounded-xl bg-red-500/10 border border-red-500/15 flex items-center justify-center">
+                            <svg className="w-4 h-4 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+                        </div>
+                        <div>
+                            <h2 className="text-lg font-bold text-white">
+                                Position Rescue
+                            </h2>
+                            <p className="text-xs text-slate-500">Protect from liquidation</p>
+                        </div>
                     </div>
                     <button
                         onClick={onClose}
@@ -115,8 +120,8 @@ export default function RescueModal({
                 <div className="px-6 flex gap-2">
                     <button
                         className={`flex-1 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 ${activeTab === 'deposit'
-                                ? 'bg-indigo-500/20 text-indigo-400 border border-indigo-500/30'
-                                : 'text-slate-400 hover:bg-white/5'
+                            ? 'bg-indigo-500/20 text-indigo-400 border border-indigo-500/30'
+                            : 'text-slate-400 hover:bg-white/5'
                             }`}
                         onClick={() => setActiveTab('deposit')}
                     >
@@ -124,8 +129,8 @@ export default function RescueModal({
                     </button>
                     <button
                         className={`flex-1 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 ${activeTab === 'repay'
-                                ? 'bg-indigo-500/20 text-indigo-400 border border-indigo-500/30'
-                                : 'text-slate-400 hover:bg-white/5'
+                            ? 'bg-indigo-500/20 text-indigo-400 border border-indigo-500/30'
+                            : 'text-slate-400 hover:bg-white/5'
                             }`}
                         onClick={() => setActiveTab('repay')}
                     >
@@ -189,7 +194,7 @@ export default function RescueModal({
                                 Processing Transaction...
                             </span>
                         ) : (
-                            `${activeTab === 'deposit' ? '⬆️ Deposit' : '💰 Repay'} ${amount || '0'} ${activeTab === 'deposit' ? 'ETH' : 'RUSD'}`
+                            `${activeTab === 'deposit' ? 'Deposit' : 'Repay'} ${amount || '0'} ${activeTab === 'deposit' ? 'ETH' : 'RUSD'}`
                         )}
                     </button>
                 </div>

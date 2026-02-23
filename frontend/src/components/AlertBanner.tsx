@@ -77,7 +77,7 @@ export default function AlertBanner({ alert, onDismiss, onRescue }: AlertBannerP
                 {/* Content */}
                 <div className="flex-1 min-w-0">
                     <div className={`font-bold text-sm ${accentColor} uppercase tracking-wider`}>
-                        {isCritical ? '🔴 Liquidation Imminent' : '🟡 Health Factor Warning'}
+                        {isCritical ? 'LIQUIDATION IMMINENT' : 'HEALTH FACTOR WARNING'}
                     </div>
                     <div className={`text-sm ${textColor} mt-0.5`}>
                         Health Factor: <span className="font-mono font-bold">{parseFloat(alert.healthFactor).toFixed(4)}</span>
@@ -97,7 +97,7 @@ export default function AlertBanner({ alert, onDismiss, onRescue }: AlertBannerP
                             className="px-4 py-2 bg-red-500 hover:bg-red-400 text-white text-sm font-bold rounded-xl
                          transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-red-500/25"
                         >
-                            🚨 Rescue Now
+                            Rescue Now
                         </button>
                     )}
                     <button
