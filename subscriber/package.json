@@ -1,0 +1,22 @@
+{
+    "name": "reactive-guard-subscriber",
+    "version": "1.0.0",
+    "description": "Somnia Reactivity SDK subscriber for ReactiveGuard",
+    "main": "dist/index.js",
+    "scripts": {
+        "start": "ts-node index.ts",
+        "build": "tsc",
+        "dev": "ts-node index.ts"
+    },
+    "dependencies": {
+        "@somnia-chain/reactivity": "latest",
+        "viem": "^2.0.0",
+        "socket.io": "^4.7.0",
+        "dotenv": "^17.0.0"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.0",
+        "ts-node": "^10.9.0",
+        "@types/node": "^20.0.0"
+    }
+}

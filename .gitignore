@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+.env
+
+# Hardhat
+cache/
+artifacts/
+typechain-types/
+
+# Next.js
+frontend/.next/
+frontend/out/
+
+# Subscriber
+subscriber/dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
